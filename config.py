@@ -4,7 +4,8 @@ database_details = {
     'dev':{
         'source_database':{
             'DB_TYPE':'mysql',
-            'DB_HOST':'http://localhost:3306/',
+            'DB_HOST':'localhost',
+            'DB_PORT':'3306',
             'DB_NAME':'lakshman',
             #'DB_USER':'root',
             'DB_USER':os.environ.get('SOURCE_DB_USER'),
@@ -14,7 +15,8 @@ database_details = {
         },
 'target_database':{
             'DB_TYPE':'mysql',
-            'DB_HOST':'http://localhost:3306/',
+            'DB_HOST': 'localhost',
+            'DB_PORT': '3306',
             'DB_NAME':'datapipeline_test',
             #'DB_USER':'root',
             #'DB_PASS':'root@6666'
