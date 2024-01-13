@@ -2,8 +2,6 @@ from util import get_conection
 
 def read_table(database_details,table_name,limit =0):
     source_database_details =  database_details['source_database']
-    print("IIN read.py ===========")
-    print(source_database_details)
     connection = get_conection(
          source_database_details['DB_TYPE'],
         source_database_details['DB_HOST'],

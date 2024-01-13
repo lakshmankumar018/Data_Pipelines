@@ -3,7 +3,7 @@ import os
 database_details = {
     'dev':{
         'source_database':{
-            'DB_TYPE':'mysql',
+            'DB_TYPE':'mysql1',
             'DB_HOST':'localhost',
             'DB_PORT':'3306',
             'DB_NAME':'lakshman',
@@ -14,7 +14,7 @@ database_details = {
 
         },
 'target_database':{
-            'DB_TYPE':'mysql',
+            'DB_TYPE':'mysql2',
             'DB_HOST': 'localhost',
             'DB_PORT': '3306',
             'DB_NAME':'datapipeline_test',

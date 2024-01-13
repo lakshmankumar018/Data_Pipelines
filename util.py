@@ -29,9 +29,10 @@ def get_mysql_connection(DB_HOST,DB_NAME,DB_USER,DB_PASS,DB_PORT):
 
 def get_conection(db_type,db_host,db_name,db_user,db_pass,db_port):
     connection = None
-    if db_type == 'mysql':
+    if db_type == 'mysql1':
         connection = get_mysql_connection(db_host,db_name,db_user,db_pass,db_port)
-
+    if db_type == 'mysql2':
+        connection = get_mysql_connection(db_host,db_name,db_user,db_pass,db_port)
     return connection
 
 def get_tables(path):
