@@ -11,14 +11,14 @@ def read_table(database_details,table_name,limit =0):
         source_database_details['DB_PORT']
     )
     cur = connection.cursor()
-    print("=====in reading cursor")
+    #print("=====in reading cursor")
     if limit ==0:
         query = 'select * from {table_name}'
     else:
         query = 'select * from {table_name} LIMIT {limit}'
 
     query = 'select * from {}'.format(table_name)
-    print(query,"=======================")
+    #print(query,"=======================")
     cur.execute(query)
     data = cur.fetchall()
     column_names = cur.column_names

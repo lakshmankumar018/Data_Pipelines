@@ -1,8 +1,9 @@
 from util import get_conection
 
 def build_insert_querey(table_name,column_names):
-    column_values = tuple(map(lambda c: c.replace(c,"%s"),column_names))
-    query = "insert into {} values {} ".format(table_name,column_values)
+    #column_values = tuple(map(lambda c: c.replace(c,"%s"),column_names))
+    #query = "insert into {} values {} ".format(table_name,column_values)
+    query = "insert into {} values".format(table_name)
     return query
 
 def load_table(database_details,data,column_names,table_name):
@@ -23,23 +24,15 @@ def load_table(database_details,data,column_names,table_name):
 
 
 def write_table_into_targetdb(connection,cursr,querey,data,batch_size = 100):
-    #records =[]
-    #count = 1
-
-    #print(querey,"===========++++++++++++++")
-
+    y = querey
     for rec in data:
-        #records.append(rec)
-        cursr.execute(querey,rec,multi=True)
-        #print(rec,"+++++++++++++++++",type(rec))
-        #if count % batch_size == 0:
-    #cursr.executemany(querey,a for a in )
+        x= querey
+        x  = querey + str(rec)
+        cursr.execute(x)
+        querey = y
     connection.commit()
 
-            #records = []
+    print("written in target successfully")
 
-        #count = count +1
-    #cursr.executemany(querey, records)
-    #connection.commit()
 
 

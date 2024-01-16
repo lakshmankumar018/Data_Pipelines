@@ -9,7 +9,7 @@ def main():
       function regarding the usage"""
     env = sys.argv[1] # check env variables under run option
     db_details = load_database_details(env)
-    print(db_details)
+    #print(db_details)
     tables = get_tables('table_list')
     for table_name in tables['table_name']:
         print("reading data from source db")
